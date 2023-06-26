@@ -1,0 +1,54 @@
+* {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    padding: 20px;
+    background-color: #f5f5f5;
+    box-shadow: 10px 0 20px -2px #888;
+}
+
+.hha-logo {
+
+    max-width: 200px;
+    height: auto;
+}
+
+.app-title {
+
+    color:#585757;
+    padding-left: 110px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 300px; 
+    position: fixed;
+    z-index: 1; 
+    top: 73px; 
+    left: 0;
+    background-color: #29C3EC; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+    
+}
+
+.sidebar a {
+    padding: 10px 8px 10px 25px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: #818181;
+  }
+
+.pie-chart {
+    padding: 50px;
+    margin-left: 300px;
+    
+}
