@@ -99,8 +99,9 @@ form {
 }
 
 .pie-charts {
-    margin-left: 140px;
+    margin-left: 340px;
     display: flex;
+    gap: 50px;
     
 }
 
