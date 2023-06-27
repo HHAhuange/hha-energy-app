@@ -12,20 +12,52 @@
         
         <div class = "header">
 
-            <img class = hha-logo src="../images/hha-logo.png" def="HHA Logo">
-            <h2 class = app-title>Net Zero Energy Master Planning Tool</h2>
+            <img class = "hha-logo" src="../images/hha-logo.png" def="HHA Logo">
+            <h2 class = "app-title">Net Zero Energy Master Planning Tool</h2>
         </div>
 
-            <div class = sidebar>
-                <a href="../index.html">Home</a>
-                <a href="./building.html">Building</a>
-                <a href="./pathways.html">Pathways</a>
-                <a href="./about.html">About</a>
+        <div class = sidebar>
+            <a href="../index.html">Home</a>
+            <a href="./building.html">Building</a>
+            <a href="./pathways.html">Pathways</a>
+            <a href="./about.html">About</a>
+        </div>
+
+        <div class = "forms">
+
+            <div class = "gas-consume">
+
+                <form name="gas-consumption" action="" method="GET">
+                    Annual Natural Gas Consumption (m<sup>3</sup>): <br>
+                    <input id ="gas" name="gas" type="text" value="" oninput="storeValue(this)">
+                </form>         
             </div>
 
-            <div class = pie-chart>
-                <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+            <div class = "elec-consume">
+
+                <form name="elec-consumption" action="" method="GET">
+                    Annual Electricity Consumption (kWh)<sup></sup>: <br>
+                    <input id ="elec" name="elec" type="text" value="" oninput="storeValue(this)">
+                </form>
             </div>
 
+            <div class = "building-area">
+
+                <form name="building-area" action="" method="GET">
+                    Building Gross Floor Area (m<sup>2</sup>): <br>
+                    <input id ="area" name="area" type="text" value="" oninput="storeValue(this)">
+                </form>
+            </div>
+
+            <input type="button" name="button" value="Submit" onClick="updateChart()">
+
+        </div>
+
+        <div class = pie-charts>
+            <canvas id="energy" style="width:100%;max-width:700px"></canvas>
+
+            <canvas id="electricity" style="max-width:700px"></canvas>
+        </div>
+    
     </body>
 </html>
