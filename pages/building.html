@@ -9,7 +9,7 @@
     <script src="./building.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
-    <body>
+    <body onload="updateChart()">
         
         <div class = "header">
 
@@ -30,7 +30,7 @@
 
                 <form name="gas-consumption" action="" method="GET">
                     Annual Natural Gas Consumption (m<sup>3</sup>): <br>
-                    <input id ="gas" name="gas" type="text" value="" oninput="storeValue(this)">
+                    <input id ="gas" name="gas" type="text" value="30000" oninput="storeValue(this)">
                 </form>         
             </div>
 
@@ -38,7 +38,7 @@
 
                 <form name="elec-consumption" action="" method="GET">
                     Annual Electricity Consumption (kWh)<sup></sup>: <br>
-                    <input id ="elec" name="elec" type="text" value="" oninput="storeValue(this)">
+                    <input id ="elec" name="elec" type="text" value="500000" oninput="storeValue(this)">
                 </form>
             </div>
 
@@ -46,7 +46,7 @@
 
                 <form name="building-area" action="" method="GET">
                     Building Gross Floor Area (m<sup>2</sup>): <br>
-                    <input id ="area" name="area" type="text" value="" oninput="storeValue(this)">
+                    <input id ="area" name="area" type="text" value="25000" oninput="storeValue(this)">
                 </form>
             </div>
 
@@ -56,12 +56,18 @@
 
         <div class = pie-charts>
             
-            <canvas id="energy" style="width:100%;max-width:400px"></canvas>
-
-            <canvas id= "emissions" style="width:100%;max-width:400px"></canvas>
-
-            <canvas id= "costs" style="width:100%;max-width:400px"></canvas>
-
+            <div>
+            <canvas id="energyChart" style="width:400px"></canvas>
+            <p id = total-energy>Total Energy: </p>
+            </div>
+            <div>
+            <canvas id= "emissionsChart" style="width:400px"></canvas>
+            <p id = total-emissions>Total Emissions: </p>
+            </div>
+            <div>
+            <canvas id= "costsChart" style="width:400px"></canvas>
+            <p id = total-cost>Total Cost: </p>
+        </div>
         </div>
     
     </body>
